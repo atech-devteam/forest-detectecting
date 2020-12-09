@@ -63,8 +63,8 @@ def display_instances_with_cv2(image, boxes, masks, class_ids, class_names, scor
         # Put the rectangle and text on the top left corner of the bounding box
         # cv2.rectangle(masked_image, (x1, y1), (x1 + ret[0], y1 + ret[1] + baseline), camera_color, -1)
         blk = np.zeros(masked_image.shape, np.uint8)
-        cv2.rectangle(blk, (x1, y1), (x1 + ret[0], y1 + ret[1] + baseline), camera_color, cv2.FILLED)
         masked_image = cv2.addWeighted(masked_image, 1.0, blk, 0.25, 1)
+        # cv2.rectangle(blk, (x1, y1), (x1 + ret[0], y1 + ret[1] + baseline), camera_color, cv2.FILLED)
         # putText(image, text, org, font, scale, color, thickness.. )
         cv2.putText(masked_image, caption, (x1, y1 + ret[1]),
                     cv2.FONT_HERSHEY_SIMPLEX, font_size, white, 1, lineType=cv2.LINE_AA)
