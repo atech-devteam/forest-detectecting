@@ -37,8 +37,8 @@ class CocoConfig(Config):
     to the COCO dataset.
     """
     NAME = "coco"
-    IMAGES_PER_GPU = 2
-    GPU_COUNT =4
+    IMAGES_PER_GPU = 1
+    GPU_COUNT = 2
     NUM_CLASSES = 1 + 80  # COCO has 80 classes
     STEPS_PER_EPOCH = 100
     LEARNING_RATE = 0.001
