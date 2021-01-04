@@ -25,3 +25,5 @@ o When the mountain rescue team is dispatched to the field, the location of the 
 o There is a limitation in monitoring a wide area and various drone shooting screens by humans only relying on the naked eye. So, in the detection of mountain accidents, the search and rescue are efficiently performed with AI detection-based intelligent drone monitoring system. 
 
 o In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
+
+![Instance Segmentation Sample](resource/in-future.png)
