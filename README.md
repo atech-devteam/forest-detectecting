@@ -1,5 +1,4 @@
-# forest-detectecting
-[] Object detection drone service for human search based on deep learning in forest areas
+# forest-detectecting : Object detection drone service for human search based on deep learning in forest areas
 
 () Introduction
 
