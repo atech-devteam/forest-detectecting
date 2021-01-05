@@ -6,7 +6,7 @@ o This service detects and classifies surrounding objects (people, rocks, etc.) 
 
 ![Instance Segmentation Sample](resource/i_web-service.png)
 
-o The service model is based on the Mask R-CNN, which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
+o The service model is based on the Mask R-CNN [https://github.com/matterport/Mask_RCNN], which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
 
 o In order to develop the model, the objects appearing in the forestland image were classified into a total of 13 classes and learned. The trained model detects class entities defined in the forestland image, and divides the areas of each detected object to recognize the shape.
 
