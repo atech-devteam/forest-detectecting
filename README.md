@@ -5,7 +5,7 @@
 
 o This service detects and classifies surrounding objects (people, rocks, etc.) and areas (forests, hiking trails, grass, etc.) around accident-risk areas and hiking trails by using forest images captured using drones and AI learning datasets. It is a empirical service that develops a learning model to perform and uses the model to determine and inform the location and characteristics of a person detected on the forest image screen.
 
-![Instance Segmentation Sample](resource/web-service.png)
+![Instance Segmentation Sample](resource/i_web-service.png)
 
 o The service model is based on the Mask R-CNN, which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
 
@@ -13,7 +13,7 @@ o In order to develop the model, the objects appearing in the forestland image w
 
 o This service model was built to demonstrate a service capable of searching for people in forest areas from images taken by drones. Users upload videos related to forest areas directly from the website(ex : service.forest-detect.com) where the service is provided, and you can see how many people are in each screen of the video, and check information on what area people are located in, and download video for including detection informations.
 
-![Instance Segmentation Sample](resource/service-concept.png)
+![Instance Segmentation Sample](resource/i_service-concept.png)
 
 
 () Necessity
@@ -26,4 +26,4 @@ o There is a limitation in monitoring a wide area and various drone shooting scr
 
 o In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
 
-![Instance Segmentation Sample](resource/in-future.png)
+![Instance Segmentation Sample](resource/i_in-future.png)
