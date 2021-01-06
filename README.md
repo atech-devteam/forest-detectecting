@@ -17,13 +17,13 @@
 
 ### Service Goal
 
-When searching for accident-prone areas and people in the forest, there may be cases in which the golden time of search and rescue may be missed as the terrain structure is difficult or the exact location of the requester in the forest is difficult to find.
+> When searching for accident-prone areas and people in the forest, there may be cases in which the golden time of search and rescue may be missed as the terrain structure is difficult or the exact location of the requester in the forest is difficult to find.
 
-When the mountain rescue team is dispatched to the field, the location of the requesting person for help is quickly identified, and life-saving training in preparation for a mountain accident using drone equipment is in progress to determine the topography and search for blind spots, and the effectiveness of drone has been confirmed.
+> When the mountain rescue team is dispatched to the field, the location of the requesting person for help is quickly identified, and life-saving training in preparation for a mountain accident using drone equipment is in progress to determine the topography and search for blind spots, and the effectiveness of drone has been confirmed.
 
-There is a limitation in monitoring a wide area and various drone shooting screens by humans only relying on the naked eye. So, in the detection of mountain accidents, the search and rescue are efficiently performed with AI detection-based intelligent drone monitoring system. 
+> There is a limitation in monitoring a wide area and various drone shooting screens by humans only relying on the naked eye. So, in the detection of mountain accidents, the search and rescue are efficiently performed with AI detection-based intelligent drone monitoring system. 
 
-In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
+> In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
 
 <img src="/resource/i_in-future.png" width="100%" height="100%" title="px(픽셀) 크기 설정" alt="in future"></img><br/>
 
@@ -33,22 +33,22 @@ In the future, when operating a drone for a specific purpose such as a search fo
 
 
 ### Original dataset
-In the development of this service, the dataset built through the AI data bulid project for autonomous flying drones.
+> In the development of this service, the dataset built through the AI data bulid project for autonomous flying drones.
 
-Raw dataset(including videos recorded by drone) description : https://aihub.or.kr/aidata/8049
+> Raw dataset(including videos recorded by drone) description : https://aihub.or.kr/aidata/8049
 
 
 ### Dataset format
-For AI model training, it is easy to apply the original dataset to the forestry service learning network, and it is used by converting it into the relatively widely known MS coco format.
+> For AI model training, it is easy to apply the original dataset to the forestry service learning network, and it is used by converting it into the relatively widely known MS coco format.
 
-The transformation raw dataset to coco format can be performed with the annotation tool provided in the AI data bulid project.
+> The transformation raw dataset to coco format can be performed with the annotation tool provided in the AI data bulid project.
 
-The dataset converted for forestry service is composed of the following format, and there are some differences in the original data set and detection object list, annotation format, and file composition.
+> The dataset converted for forestry service is composed of the following format, and there are some differences in the original data set and detection object list, annotation format, and file composition.
 
 
 ### List of detectable objects (classes)
-|<center>Dataset</center>|<center>Class Names<br>(Label list)</center>|
-|-----|----------|
+|<center>     Dataset     </center>|<center>Class Names<br>(Label list)</center>|
+|-----------------------------------|---------------------------------------------|
 |<center>Original Dataset<br>(28 classes)</center>|tree,person,animal,house,apartment,building, school,office,traffic sign,traffic light,streetlamp,telephone pole, banner,milestone, bridge,tower, car_vechicle, bus_vehicle,truck_vehicle,motorcycle, bike_vehicle,lawn, flower_garden, forest, liver, road, pavement, parking_lot,crosswalk, hiking_trail,trail,flower_bed|
 |<center>Forestry Dataset<br>(13 classes)</center>|tree, person, person_ab, people, forest, road, hiking_trail, rock, rocks, lawn, restarea, parking_lot, car|
 
