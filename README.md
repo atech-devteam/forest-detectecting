@@ -6,7 +6,7 @@
 
 > This service detects and classifies surrounding objects (people, rocks, etc.) and areas (forests, hiking trails, grass, etc.) around accident-risk areas and hiking trails by using forest images captured using drones and AI learning datasets. It is a empirical service that develops a learning model to perform and uses the model to determine and inform the location and characteristics of a person detected on the forest image screen.
 
-<img src="/resource/i_web-service.png" width="100%" height="100%" title="px(픽셀) 크기 설정" alt="web-service"></img><br/>
+<img src="/resource/i_web-service.png" width="100%" height="100%" title="---" alt="web-service"></img><br/>
 
 > The service model is based on the Mask R-CNN [https://github.com/matterport/Mask_RCNN], which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
 
@@ -51,7 +51,7 @@
 |-----------------------------------|---------------------------------------------|
 |<center>Original Dataset</center><br><center>(28 classes)</center>|tree, person, animal, house, apartment, building, school,office, traffic sign, traffic light, streetlamp, telephone pole, <br>banner, milestone, bridge, tower, car_vechicle, bus_vehicle, truck_vehicle, motorcycle, bike_vehicle, <br>lawn,flower_garden, forest, liver, road, pavement, parking_lot, crosswalk, hiking_trail, trail, flower_bed|
 |<center>Forestry Dataset</center><br><center>(13 classes)</center>|tree, person, person_ab, people, forest, road, hiking_trail, rock, rocks, lawn, restarea, parking_lot, car|
-
+<br>
 
 ### Dataset Folder Tree
 |<center> Dataset </center>|<center> Step </center>|<center>Folder Tree</center>|
@@ -61,3 +61,17 @@
 | | | |
 |Forestry Dataset|1) Split Train/Validation | Train<br> > Image-000001.jpg<br> > Image-000002.jpg<br> > Image-...<br> <br> Validation<br> > Image-000003.jpg<br>  > Image-000007.jpg<br> > Image-...<br>||
 |Forestry Dataset|2) Convert to coco format | Annotation<br>> train.json<br>> validation.json<br><br> Images<br>> Train_Images <br>> Validation_Images<br>  >> Image-000003.jpg<br>  >> Image-000007.jpg<br>  >> Image-...<br>||
+<br>
+
+### Annotation(.json) format
+<img src="/resource/i_ann-format.png" width="80%" height="80%" title="---" alt="Annotation Format"></img><br/>
+
+
+## Demo Web Service
+### About service
+> The web service displays the detection results such as where people are located in the forest image captured by the drone on the screen and provides it as a video file.
+<img src="/resource/i_web-service.png" width="100%" height="100%" title="---" alt="web-service"></img><br/>
+
+### Using service
+> Users connect to this service through a web browser and directly upload the video file they want to detect, so that they can check the detection result on the web screen, such as how many people are located on each screen, and what area the people are located in, and download it as a video file.
+
