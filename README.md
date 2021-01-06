@@ -165,7 +165,7 @@
  
 > Demo code is provided in two types: python file and ipynb that can be executed by jupyter notebook service(web).
 
-> Running Process with train.py - [options]
+> Running Process with train.py -options
 >> Epochs : '--train_epochs', type=int, default=2, help='Number of training epochs: '
 >> Steps per epoch : '--steps_per_epoch', type=int, default=2,help='Number of training epochs: ' 
 >> Learning_rate : '--end_learning_rate', type=float, default=1e-3, help='End learning rate for the optimizer.'
@@ -177,7 +177,7 @@
 
 > Configuration example in train.ipynb
 
-''' python
+```
 class EvaluateConfig(forest_detect.DetectConfig):
   NAME = "test"
   GPU_COUNT = 2
@@ -189,7 +189,7 @@ class_names = ['BG', 'tree, 'person', ... ]
 PRE_MODEL_PATH = os.path.join(ROOT_DIR, "trained-weight.h5")
 test_set = ROOT_DIR + "/datasets"
 subset = "test"
-'''
+```
 
 
 ### Evaluation
@@ -208,7 +208,7 @@ subset = "test"
 
 > Example : Config in evaluate_set.ipynb (same for evaluate_image.ipynb)
 
-''' python
+```
 class EvaluateConfig(forest_detect.DetectConfig):
   NAME = "test"
   GPU_COUNT = 2
@@ -220,3 +220,4 @@ class_names = ['BG', 'tree, 'person', ... ]
 PRE_MODEL_PATH = os.path.join(ROOT_DIR, "trained-weight.h5")
 test_set = ROOT_DIR + "/datasets"
 subset = "test"
+```
