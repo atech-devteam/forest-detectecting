@@ -167,28 +167,33 @@
 
 > Running Process with train.py -options
 >> Epochs : '--train_epochs', type=int, default=2, help='Number of training epochs: '
->> Steps per epoch : '--steps_per_epoch', type=int, default=2,help='Number of training epochs: ' 
->> Learning_rate : '--end_learning_rate', type=float, default=1e-3, help='End learning rate for the optimizer.'
->> Dataset path : '--dataset_dir', type=str, default='datasets', help='Path to the directory containing the PASCAL VOC data tf record.'
->> Pre-trained weight : '--pre_trained_model', type=str, default='logs/coco20201209T1527/mask_rcnn_coco_0001.h5', help='Path to the pre-trained model checkpoint.'
->> Images per GPU : '--images_per_gpu', type=int, default=4, help='Number of images on a gpu: '
->> GPU count : '--gpu_count', type=int, default=2, help='Number of gpu to be used: '
->> Example : python train.py --train_epochs=20 --steps_per_epoch=100 --end_learning_rate=0.001 -dataset_dir="./train/dataset" --pre_trained_model="./train/model —images_per_gpu=3 --gpu_count=2
+>> <br>Steps per epoch : '--steps_per_epoch', type=int, default=2,help='Number of training epochs: ' 
+>> <br>Learning_rate : '--end_learning_rate', type=float, default=1e-3, help='End learning rate for the optimizer.'
+>> <br>Dataset path : '--dataset_dir', type=str, default='datasets', help='Path to the directory containing the PASCAL VOC data tf record.'
+>> <br>Pre-trained weight : '--pre_trained_model', type=str, default='logs/coco20201209T1527/mask_rcnn_coco_0001.h5', help='Path to the pre-trained model checkpoint.'
+>> <br>Images per GPU : '--images_per_gpu', type=int, default=4, help='Number of images on a gpu: '
+>> <br>GPU count : '--gpu_count', type=int, default=2, help='Number of gpu to be used: '
+>> <br> Example
+```
+python train.py --train_epochs=20 --steps_per_epoch=100 --end_learning_rate=0.001 -dataset_dir="./train/dataset" --pre_trained_model="./train/model —images_per_gpu=3 --gpu_count=2
+```
 
 > Configuration example in train.ipynb
 
-```
-class EvaluateConfig(forest_detect.DetectConfig):
-  NAME = "test"
+```{.python}
+class ForestConfig(Config):
+  NAME = "forest"
   GPU_COUNT = 2
   IMAGE_PER_GPU = 4
   NUM_CLASSES = 1 + 13
+  STEPS_PER_EPOCH = 100
+  LEARNING_RATE = 0.001
 
-config = EvaluateConfig()
-class_names = ['BG', 'tree, 'person', ... ]
-PRE_MODEL_PATH = os.path.join(ROOT_DIR, "trained-weight.h5")
-test_set = ROOT_DIR + "/datasets"
-subset = "test"
+config = ForestConfig()
+
+args_model = ROOT_DIR + "pre_trained.h5"
+args_dataset = ROOT_DIR + "/datasets"
+args_logs = ROOT_DIR + "/logs"
 ```
 
 
@@ -208,11 +213,11 @@ subset = "test"
 
 > Example : Config in evaluate_set.ipynb (same for evaluate_image.ipynb)
 
-```
+```{.python}
 class EvaluateConfig(forest_detect.DetectConfig):
   NAME = "test"
-  GPU_COUNT = 2
-  IMAGE_PER_GPU = 4
+  GPU_COUNT = 1
+  IMAGE_PER_GPU = 1
   NUM_CLASSES = 1 + 13
 
 config = EvaluateConfig()
