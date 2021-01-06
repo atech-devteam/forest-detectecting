@@ -68,7 +68,7 @@
 ### Annotation(.json) format
 <img src="/resource/i_ann-format.png" width="80%" height="80%" title="---" alt="Annotation Format"></img><br/>
 
-
+***
 ## Demo Service Overview
 ### About service
 > The web service displays the detection results such as where people are located in the forest image captured by the drone on the screen and provides it as a video file.
@@ -103,7 +103,7 @@
 >> 5. Progress bar : You can check the playback time and select the screen of the desired frame
 >> 6. Session clear : End all tasks and remove information and data
 
-
+***
 ## Overview the forestry AI model 
 ### About model
 > This model detects and classifies objects (people, rocks, etc.) and areas(forest, lawn, etc.) around hiking trails and accident-risk areas in forest video captured by drones.
@@ -119,7 +119,7 @@
 
 <img src="/resource/i_mrcnn-network.png" width="100%" height="100%" title="---" alt=Mask R-CNN Network Structure"></img><br/>
 
-
+***
 ## Installation for training the model
 ### About environment 
 > The AI model for the search of people in forests was developed in Python, and OpenCV was used for image processing, and based on the Mask R-CNN network that can detect objects and segment regions at the same time.
@@ -156,6 +156,7 @@
 
 <img src="/resource/i_files.png" width="100%" height="100%" title="---" alt=Files for demo"></img><br/>
                                                                                            
+***
 ## Run Training and Evaluation
 ### Training
 > Training settings and process : Basic model(pre-trained weight), Training Dataset, Network configuration
