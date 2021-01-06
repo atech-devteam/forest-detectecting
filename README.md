@@ -8,11 +8,13 @@
 
 <img src="/resource/i_web-service.png" width="100%" height="100%" title="---" alt="web-service"></img><br/>
 
-> The service model is based on the Mask R-CNN [https://github.com/matterport/Mask_RCNN], which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
-
 > In order to develop the model, the objects appearing in the forestland image were classified into a total of 13 classes and learned. The trained model detects class entities defined in the forestland image, and divides the areas of each detected object to recognize the shape.
 
 > This service model was built to demonstrate a service capable of searching for people in forest areas from images taken by drones. Users upload videos related to forest areas directly from the website(ex : service.forest-detect.com) where the service is provided, and you can see how many people are in each screen of the video, and check information on what area people are located in, and download video for including detection informations.
+
+> The service model is based on the Mask R-CNN [https://github.com/matterport/Mask_RCNN], which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
+
+<img src="/resource/i_system-structure.png" width="100%" height="100%" title="---" alt="structure"></img><br/>
 
 
 ### Service Goal
@@ -29,7 +31,7 @@
 
 
 ***
-## Data for development
+## Dataset for the AI service development
 
 
 ### Original dataset
@@ -67,11 +69,46 @@
 <img src="/resource/i_ann-format.png" width="80%" height="80%" title="---" alt="Annotation Format"></img><br/>
 
 
-## Demo Web Service
+## Demo Service Overview
 ### About service
 > The web service displays the detection results such as where people are located in the forest image captured by the drone on the screen and provides it as a video file.
+
 <img src="/resource/i_web-service.png" width="100%" height="100%" title="---" alt="web-service"></img><br/>
 
-### Using service
 > Users connect to this service through a web browser and directly upload the video file they want to detect, so that they can check the detection result on the web screen, such as how many people are located on each screen, and what area the people are located in, and download it as a video file.
 
+> In order to provide faster detection results, the result is displayed on the screen as quickly as possible with the Low FPS image instead of all frames of the image by a processor, and at the same time, the high FPS video file including the detection, inference results created by another processor and users can download it.
+
+<img src="/resource/i_user-process.png" width="100%" height="100%" title="---" alt="using service"></img><br/>
+
+### web service url 
+
+### Using service
+> Video file upload : Select and upload an video file(mp4) to detect the search result of forestry
+
+<img src="/resource/i_webUI1.png" width="100%" height="100%" title="---" alt="webUI1"></img><br/>
+
+>> 1. Select video file with Explorer or Drag&Drop
+>> 2. Start Upload
+>> 3. Upolad progress, change to display area when the upload finished
+
+> Detection and Display 
+
+<img src="/resource/i_webUI2.png" width="100%" height="100%" title="---" alt="webUI2"></img><br/>
+
+>> 1. Converts the input video to Low FPS and applies the AI model, and when the processing is complete, the play button is activated
+>> 2. AI detection is performed for High FPS video files, and when it is completed, the download button is activated
+>> 3. Display detection : AI detection results are displayed on the web screen at Low FPS
+>> 4. Play button : Results can be played or stopped when Low FPS conversion is complete
+>> 5. Progress bar : You can check the playback time and select the screen of the desired frame
+>> 6. Session clear : End all tasks and remove information and data
+
+
+## Forestry AI model
+### Overview
+> This model detects and classifies objects (people, rocks, etc.) and areas(forest, lawn, etc.) around hiking trails and accident-risk areas in forest video captured by drones.
+> Forest vidoes rarely contain objects with a certain shape, such as forests, paths, hiking trails, and rocks.And in many cases, areas such as forests, grass, and rocks in the grass overlap, or the boundaries between objects and areas are ambiguous even with the naked eye of a person.
+
+<img src="/resource/i_forestry-objects.png" width="100%" height="100%" title="---" alt=forest objects"></img><br/>
+                                                                                                      
+> The AI model for searching for people in forest images should be capable of detecting various types of objects such as people, forests, hiking trails, rocks, etc., and at the same time segmenting the area to understand where people are located.
