@@ -47,10 +47,10 @@ The dataset converted for forestry service is composed of the following format, 
 
 
 ### List of detectable objects (classes)
-|<center>Dataset</center>|<center>Class Names(Label list)</center>|
+|<center>Dataset</center>|<center>Class Names<br>(Label list)</center>|
 |-----|----------|
-|<center>Original Dataset(28 classes)</center>|tree,person,animal,house,apartment,building, school,office,traffic sign,traffic light,streetlamp,telephone pole, banner,milestone, bridge,tower, car_vechicle, bus_vehicle,truck_vehicle,motorcycle, bike_vehicle,lawn, flower_garden, forest, liver, road, pavement, parking_lot,crosswalk, hiking_trail,trail,flower_bed|
-|<center>Forestry Dataset(13 classes)</center>|tree, person, person_ab, people, forest, road, hiking_trail, rock, rocks, lawn, restarea, parking_lot, car|
+|<center>Original Dataset<br>(28 classes)</center>|tree,person,animal,house,apartment,building, school,office,traffic sign,traffic light,streetlamp,telephone pole, banner,milestone, bridge,tower, car_vechicle, bus_vehicle,truck_vehicle,motorcycle, bike_vehicle,lawn, flower_garden, forest, liver, road, pavement, parking_lot,crosswalk, hiking_trail,trail,flower_bed|
+|<center>Forestry Dataset<br>(13 classes)</center>|tree, person, person_ab, people, forest, road, hiking_trail, rock, rocks, lawn, restarea, parking_lot, car|
 
 
 
