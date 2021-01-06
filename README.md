@@ -49,8 +49,8 @@
 ### List of detectable objects (classes)
 |<center> Dataset </center>|<center>Class Names<br>(Label list)</center>|
 |-----------------------------------|---------------------------------------------|
-|<center>Original Dataset<br>(28 classes)</center>|tree,person,animal,house,apartment,<br>building, school,office,traffic sign,traffic light,streetlamp,telephone pole,<br> banner,milestone, bridge,tower, car_vechicle, bus_vehicle,<br>truck_vehicle, motorcycle, bike_vehicle,lawn, flower_garden, forest,<br>liver, road, pavement, parking_lot,crosswalk,<br>hiking_trail,trail,flower_bed|
-|<center>Forestry Dataset<br>(13 classes)</center>|tree, person, person_ab, people, forest,<br>road, hiking_trail, rock, rocks, lawn,<br>restarea, parking_lot, car|
+|<center>Original Dataset<br>(28 classes)</center>|tree, person, animal, house, apartment, building, school,office, traffic sign, traffic light, streetlamp, telephone pole,<br> banner, milestone, bridge, tower, car_vechicle, bus_vehicle, truck_vehicle, motorcycle, bike_vehicle, <br>lawn,flower_garden, forest, liver, road, pavement, parking_lot, crosswalk, hiking_trail,trail,flower_bed|
+|<center>Forestry Dataset<br>(13 classes)</center>|tree, person, person_ab, people, forest,<br>road, hiking_trail, rock, rocks, lawn, restarea, parking_lot, car|
 
 
 
