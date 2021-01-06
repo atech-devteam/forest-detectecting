@@ -54,7 +54,11 @@
 
 
 ### Dataset Folder Tree
-|<center> Dataset </center>|<center>Folder Tree</center>|
-|----------------------------------|----------------------------------|
-|1) Raw video to frame images| VideoFrames<br> ㅏ Image-000001.jpg<br> ㅏ Image-000002.jpg<br> ㅏ Image-...<br>|
+|<center> Dataset </center>|<center> Step </center>|<center>Folder Tree</center>|
+|----------------------------------|----------------------------------|----------------------------------|
+|Original Dataset|1) Raw video to images| VideoFrames<br> ㅏ Image-000001.jpg<br> ㅏ Image-000002.jpg<br> ㅏ Image-...<br>|
+|Original Dataset|2) Annotations for images| VideoFrames<br> ㅏ Image-000001.jpg<br> ㅏ Image-000001.json<br> ㅏ Image-000002.jpg<br> ㅏ Image-000002.json<br> ㅏ Image-...<br>|
+|----------------------------------|----------------------------------|----------------------------------|
+|Forestry Dataset|1) Split Train/Validation | Train<br> ㅏ Image-000001.jpg<br> ㅏ Image-000002.jpg<br> ㅏ Image-...<br> <br> Validation<br> ㅏ Image-000003.jpg<br> ㅏ Image-000007.jpg<br> ㅏ Image-...<br>||
+|Forestry Dataset|2) Convert to coco format | Annotation<br> ㅏ train.json<br> ㅏ validation.json<br><br> Images<br>ㅏ Train_Images <br>ㅏ Validation_Images...<br> <br> Val<br> ㅏ Image-000003.jpg<br> ㅏ Image-000007.jpg<br> ㅏ Image-...<br>||
 
