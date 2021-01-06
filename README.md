@@ -177,7 +177,19 @@
 
 > Configuration example in train.ipynb
 
-<img src="/resource/i_train-config.png" width="100%" height="100%" title="---" alt="Training Config example"></img><br/>
+''' python
+class EvaluateConfig(forest_detect.DetectConfig):
+  NAME = "test"
+  GPU_COUNT = 2
+  IMAGE_PER_GPU = 4
+  NUM_CLASSES = 1 + 13
+
+config = EvaluateConfig()
+class_names = ['BG', 'tree, 'person', ... ]
+PRE_MODEL_PATH = os.path.join(ROOT_DIR, "trained-weight.h5")
+test_set = ROOT_DIR + "/datasets"
+subset = "test"
+'''
 
 
 ### Evaluation
@@ -196,4 +208,15 @@
 
 > Example : Config in evaluate_set.ipynb (same for evaluate_image.ipynb)
 
-<img src="/resource/i_eval-config.png" width="100%" height="100%" title="---" alt="Evaluation Config example"></img><br/>												    
+''' python
+class EvaluateConfig(forest_detect.DetectConfig):
+  NAME = "test"
+  GPU_COUNT = 2
+  IMAGE_PER_GPU = 4
+  NUM_CLASSES = 1 + 13
+
+config = EvaluateConfig()
+class_names = ['BG', 'tree, 'person', ... ]
+PRE_MODEL_PATH = os.path.join(ROOT_DIR, "trained-weight.h5")
+test_set = ROOT_DIR + "/datasets"
+subset = "test"
