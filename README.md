@@ -31,7 +31,8 @@ In the future, when operating a drone for a specific purpose such as a search fo
 ***
 ## Data for development
 
-### Raw data
+
+### Original dataset
 In the development of this service, the dataset built through the AI data bulid project for autonomous flying drones.
 
 Raw dataset(including videos recorded by drone) description : https://aihub.or.kr/aidata/8049
@@ -43,5 +44,15 @@ For AI model training, it is easy to apply the original dataset to the forestry 
 The transformation raw dataset to coco format can be performed with the annotation tool provided in the AI data bulid project.
 
 The dataset converted for forestry service is composed of the following format, and there are some differences in the original data set and detection object list, annotation format, and file composition.
+
+
+### List of detectable objects (classes)
+|Dataset|Class Names(Label list)|
+|---|---|
+|Original Dataset(28 classes)|tree,person,animal,house,apartment,building, school,office,traffic sign,traffic light,streetlamp,telephone pole, banner,milestone, bridge,tower, car_vechicle, bus_vehicle,truck_vehicle,motorcycle, bike_vehicle,lawn, flower_garden, forest, liver, road, pavement, parking_lot,crosswalk, hiking_trail,trail,flower_bed|
+|Forestry Dataset(13 classes)|ree, person, person_ab, people, forest, road, hiking_trail
+, rock, rocks, lawn, restarea, parking_lot, car|
+
+
 
 
