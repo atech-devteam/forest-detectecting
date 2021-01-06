@@ -6,7 +6,7 @@
 
 > This service detects and classifies surrounding objects (people, rocks, etc.) and areas (forests, hiking trails, grass, etc.) around accident-risk areas and hiking trails by using forest images captured using drones and AI learning datasets. It is a empirical service that develops a learning model to perform and uses the model to determine and inform the location and characteristics of a person detected on the forest image screen.
 
-<img src="/resource/i_service-goal.png" width="100%" height="100%" title="---" alt="web-service"></img><br/>
+<img src="/resource/i_service-goal.png" width="80%" height="80%" title="---" alt="web-service"></img><br/>
 
 > In order to develop the model, the objects appearing in the forestland image were classified into a total of 13 classes and learned. The trained model detects class entities defined in the forestland image, and divides the areas of each detected object to recognize the shape.
 
@@ -14,7 +14,7 @@
 
 > The service model is based on the Mask R-CNN [https://github.com/matterport/Mask_RCNN], which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
 
-<img src="/resource/i_system-structure.png" width="100%" height="100%" title="---" alt="structure"></img><br/>
+<img src="/resource/i_system-structure.png" width="80%" height="80%" title="---" alt="structure"></img><br/>
 
 
 ### Service Goal
@@ -27,7 +27,7 @@
 
 > In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
 
-<img src="/resource/i_in-future.png" width="100%" height="100%" title="px(픽셀) 크기 설정" alt="in future"></img><br/>
+<img src="/resource/i_in-future.png" width="80%" height="80%" title="px(픽셀) 크기 설정" alt="in future"></img><br/>
 
 
 ***
@@ -73,20 +73,20 @@
 ### About service
 > The web service displays the detection results such as where people are located in the forest image captured by the drone on the screen and provides it as a video file.
 
-<img src="/resource/i_web-service.png" width="100%" height="100%" title="---" alt="web-service"></img><br/>
+<img src="/resource/i_web-service.png" width="80%" height="80%" title="---" alt="web-service"></img><br/>
 
 > Users connect to this service through a web browser and directly upload the video file they want to detect, so that they can check the detection result on the web screen, such as how many people are located on each screen, and what area the people are located in, and download it as a video file.
 
 > In order to provide faster detection results, the result is displayed on the screen as quickly as possible with the Low FPS image instead of all frames of the image by a processor, and at the same time, the high FPS video file including the detection, inference results created by another processor and users can download it.
 
-<img src="/resource/i_user-process.png" width="100%" height="100%" title="---" alt="using service"></img><br/>
+<img src="/resource/i_user-process.png" width="80%" height="80%" title="---" alt="using service"></img><br/>
 
 ### web service url 
 
 ### Using service
 > Video file upload : Select and upload an video file(mp4) to detect the search result of forestry
 
-<img src="/resource/i_webUI1.png" width="100%" height="100%" title="---" alt="webUI1"></img><br/>
+<center><img src="/resource/i_webUI1.png" width="80%" height="80%" title="---" alt="webUI1"></img></center><br/>
 
 >> 1. Select video file with Explorer or Drag&Drop
 >> 2. Start Upload
@@ -112,7 +112,7 @@
 
 > Forest vidoes rarely contain objects with a certain shape, such as forests, paths, hiking trails, and rocks.And in many cases, areas such as forests, grass, and rocks in the grass overlap, or the boundaries between objects and areas are ambiguous even with the naked eye of a person.
 
-<img src="/resource/i_forestry-objects.png" width="100%" height="100%" title="---" alt="forest objects"></img><br/>
+<img src="/resource/i_forestry-objects.png" width="80%" height="80%" title="---" alt="forest objects"></img><br/>
                                                                                                       
 > The AI model for searching for people in forest images should be capable of detecting various types of objects such as people, forests, hiking trails, rocks, etc., and at the same time segmenting the area to understand where people are located.
 
@@ -122,7 +122,7 @@
 
 > The model is trained in 3 steps, steps 1 to 2 are Bounding box regression and classification operating in Faster R-CNN, and the last 3 steps are binary classification to determine whether each pixel belongs to the category predicted in step 2.
 
-<img src="/resource/i_mrcnn-network.png" width="100%" height="100%" title="---" alt="Mask R-CNN Network Structure"></img><br/>
+<img src="/resource/i_mrcnn-network.png" width="60%" height="60%" title="---" alt="Mask R-CNN Network Structure"></img><br/>
 
 ***
 
@@ -131,7 +131,7 @@
 ### About environment 
 > The AI model for the search of people in forests was developed in Python, and OpenCV was used for image processing, and based on the Mask R-CNN network that can detect objects and segment regions at the same time.
 
-<img src="/resource/i_environment.png" width="100%" height="100%" title="---" alt="Environment for development"></img><br/>
+<img src="/resource/i_environment.png" width="60%" height="60%" title="---" alt="Environment for development"></img><br/>
                                                                                                               
 > The development and test environment was configured in the Anaconda virtual environment with Python3.7 (python.org) and Anaconda (anaconda.com) installed on Ubuntu OS.
 > For model training using gpu, graphics library toolkit CUDA (10.1) and CUDNN are required.
@@ -163,8 +163,35 @@
 > When the source is installed through git clone, it is created in the following file and folder structure.
 
 > It provide datasets for training, testing and evaluation of AI models and pre-trained model with application code.
+```
+Forest_Detecting                            
+├─train.py                               // training code using pre-trained model
+├─train_init.py                          // initial training without pre-trained model
+├─detect.py                              // Detection using pre-trained model 
+├─evaluate_image.py                      // Evaluation for objects in one image
+├─evaluate_set.py                        // Evaluation for objects in test set
+├─forest_weitht1.h5                      // pre-trained model weights
+├─mrcnn                                  // maskrcnn library 
+├─logs                                   // save trained weights
+│  ├─ new_train_weight_{epoch__}.h5           
+├─datasets                               // datasets for train, evaluate and test
+│  ├─ dataset_N                             
+│  │   ├─annotations                   // annotations
+│  │   │      ├─ instances_train.json // annotation files for train images
+│  │   │      ├─ instances_val.json   // annotation files for validation images
+│  │   │      ├─ instances_test.json  // annotation files for test images
+│  │   └─train                         // training images for training 
+│  │   │      ├─ train_image_0001.jpg       
+│  │   │      ├─ train_image_.....jpg       
+│  │   └─val                           // validation images for training
+│  │   │      ├─ val_image_0001.jpg         
+│  │   │      ├─ val_image_.....jpg         
+│  │   └─test                          // test images for evaluation
+│  │   │      ├─ test_image_0001.jpg
+│  │   │      ├─ test_image_.....jpg
 
-<img src="/resource/i_files.png" width="100%" height="100%" title="---" alt="Files for demo"></img><br/>
+```
+
                                                                                            
 ***
 
