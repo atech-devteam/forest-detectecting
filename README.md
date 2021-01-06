@@ -25,7 +25,7 @@ There is a limitation in monitoring a wide area and various drone shooting scree
 
 In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
 
-<img src="/resource/i_in-future.png" width="70%" height="70%" title="px(픽셀) 크기 설정" alt="in future"></img><br/>
+<img src="/resource/i_in-future.png" width="100%" height="100%" title="px(픽셀) 크기 설정" alt="in future"></img><br/>
 
 
 ***
