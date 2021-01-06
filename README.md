@@ -1,4 +1,4 @@
-# Detection for searching accidents in forest areas
+# Detection for searching accidents in forest areas (Under constructing)
 
 ## Introduction
 
@@ -165,23 +165,14 @@
 > Demo code is provided in two types: python file and ipynb that can be executed by jupyter notebook service(web).
 
 > Running Process with train.py - [options]
->> Epochs
->>> '--train_epochs', type=int, default=2, help='Number of training epochs: '
->> Steps per epoch
->>> '--steps_per_epoch', type=int, default=2,help='Number of training epochs: ' 
->> Learning_rate
->>> '--end_learning_rate', type=float, default=1e-3, help='End learning rate for the optimizer.'
->> Path of the training dataset
->>> '--dataset_dir', type=str, default='datasets', 
-			help='Path to the directory containing the PASCAL VOC data tf record.'
->> Pre-trained weight
->>> '--pre_trained_model', type=str, default='logs/coco20201209T1527/mask_rcnn_coco_0001.h5', help='Path to the pre-trained model checkpoint.'
->> Images per GPU 
->>> '--images_per_gpu', type=int, default=4, help='Number of images on a gpu: '
->> GPU count
->>> '--gpu_count', type=int, default=2, help='Number of gpu to be used: '
->> Example
->>> python train.py --train_epochs=20 --steps_per_epoch=100 --end_learning_rate=0.001 -dataset_dir="./train/dataset" --pre_trained_model="./train/model —images_per_gpu=3 --gpu_count=2
+>> Epochs : '--train_epochs', type=int, default=2, help='Number of training epochs: '
+>> Steps per epoch : '--steps_per_epoch', type=int, default=2,help='Number of training epochs: ' 
+>> Learning_rate : '--end_learning_rate', type=float, default=1e-3, help='End learning rate for the optimizer.'
+>> Dataset path : '--dataset_dir', type=str, default='datasets', help='Path to the directory containing the PASCAL VOC data tf record.'
+>> Pre-trained weight : '--pre_trained_model', type=str, default='logs/coco20201209T1527/mask_rcnn_coco_0001.h5', help='Path to the pre-trained model checkpoint.'
+>> Images per GPU : '--images_per_gpu', type=int, default=4, help='Number of images on a gpu: '
+>> GPU count : '--gpu_count', type=int, default=2, help='Number of gpu to be used: '
+>> Example : python train.py --train_epochs=20 --steps_per_epoch=100 --end_learning_rate=0.001 -dataset_dir="./train/dataset" --pre_trained_model="./train/model —images_per_gpu=3 --gpu_count=2
 
 > Configuration example in train.ipynb
 
@@ -202,5 +193,6 @@
 >> dastset path : Dataset_DIR, subset
 >> class names : tree, person, forest, ...
 
-> Configuration example in evaluate_set.ipynb and evaluate_image.ipynb
+> Example : Config in evaluate_set.ipynb (same for evaluate_image.ipynb)
 
+<img src="/resource/i_eval-config.png" width="100%" height="100%" title="---" alt=Evaluation Config example"></img><br/>												    
