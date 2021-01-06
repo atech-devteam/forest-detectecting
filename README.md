@@ -28,7 +28,7 @@ In the future, when operating a drone for a specific purpose such as a search fo
 
 ![](resource/i_in-future.png)
 
-- - -
+***
 ## Data for development
 
 ### Raw data
