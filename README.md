@@ -6,8 +6,7 @@
 
 > This service detects and classifies surrounding objects (people, rocks, etc.) and areas (forests, hiking trails, grass, etc.) around accident-risk areas and hiking trails by using forest images captured using drones and AI learning datasets. It is a empirical service that develops a learning model to perform and uses the model to determine and inform the location and characteristics of a person detected on the forest image screen.
 
-> ![Instance Segmentation Sample](resource/i_web-service.png)
-<img src="/resource/i_web-service.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="web-service"></img><br/>
+<img src="/resource/i_web-service.png" width="100%" height="100%" title="px(픽셀) 크기 설정" alt="web-service"></img><br/>
 
 > The service model is based on the Mask R-CNN [https://github.com/matterport/Mask_RCNN], which enables object detection and segmentation simultaneously according to the characteristics of forestland images in which many objects (forests, hiking trails, rocks, etc.) without a predetermined shape are distributed.
 
@@ -26,7 +25,8 @@ There is a limitation in monitoring a wide area and various drone shooting scree
 
 In the future, when operating a drone for a specific purpose such as a search for people in forests by upgrading the learning model and service, the drone equipped with an AI model according to the purpose to autonomously drive for the search (stop when a mountain accident is detected, Alarms, etc.) can be applied.
 
-![](resource/i_in-future.png)
+<img src="/resource/i_in-future.png" width="70%" height="70%" title="px(픽셀) 크기 설정" alt="in future"></img><br/>
+
 
 ***
 ## Data for development
