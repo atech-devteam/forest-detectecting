@@ -6,7 +6,7 @@
 
 > This service detects and classifies surrounding objects (people, rocks, etc.) and areas (forests, hiking trails, grass, etc.) around accident-risk areas and hiking trails by using forest images captured using drones and AI learning datasets. It is a empirical service that develops a learning model to perform and uses the model to determine and inform the location and characteristics of a person detected on the forest image screen.
 
-<img src="/resource/i_service-goal.png" width="80%" height="80%" title="---" alt="web-service"></img><br/>
+<img src="/resource/i_web-service.png" width="80%" height="80%" title="---" alt="web-service"></img><br/>
 
 > In order to develop the model, the objects appearing in the forestland image were classified into a total of 13 classes and learned. The trained model detects class entities defined in the forestland image, and divides the areas of each detected object to recognize the shape.
 
@@ -100,8 +100,6 @@
 ### About service
 
 > The web service displays the detection results such as where people are located in the forest image captured by the drone on the screen and provides it as a video file.
-
-<img src="/resource/i_web-service.png" width="80%" height="80%" title="---" alt="web-service"></img><br/>
 
 > Users connect to this service through a web browser and directly upload the video file they want to detect, so that they can check the detection result on the web screen, such as how many people are located on each screen, and what area the people are located in, and download it as a video file.
 
